@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clima em Santa Bárbara</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: transparent;
+        overflow: hidden;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* Sem isto o widget passa da largura da página em vez de rolar. */
+      #weatherandtime-widget-96mui0ijt6 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="weatherandtime-widget-96mui0ijt6"><a
+            href="https://weatherandtime.net/pt/weather/santa-barbara-minas-gerais-37470" target="_blank" rel="noopener">Santa Bárbara</a></div>
+    <script
+        type="text/javascript"> (function () { const widgetUrl = encodeURIComponent(location.href); async function fetchWidgetData() { let WUrl = 'https://weatherandtime.net/api/template?&cityId=37470&id=ticker5&color=1F2836&langId=31&font=helvetica&width=500&iconPack=grd_fill&rand_id=96mui0ijt6'; WUrl += '&ref=' + widgetUrl; let response = await fetch(WUrl); if (!response.ok) { throw new Error(`HTTP error! Status: ${response.status}`); } const data = await response.json(); if (data.patternHTML) { document.getElementById("weatherandtime-widget-96mui0ijt6").innerHTML = data.patternHTML; } } fetchWidgetData(); })(); </script>
+  </body>
+</html>
